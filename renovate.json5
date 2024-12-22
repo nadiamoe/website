@@ -21,13 +21,13 @@
     {
       "customType": "regex",
       "depNameTemplate": "simple-icons/simple-icons-font",
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver",
       "fileMatch": [
         "Dockerfile",
       ],
       "matchStrings": [
-        "simple-icons-font@(?<currentValue>[\\w.-]+)",
+        "simple-icons-font@v(?<currentValue>[\\w.-]+)",
       ],
     },
   ],
@@ -36,9 +36,9 @@
       "matchPackageNames": ["nginx"],
       "versioning": "loose",
     },
-    {
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "automerge": true,
-    },
+    // {
+    //   "matchUpdateTypes": ["minor", "patch", "digest"],
+    //   "automerge": true,
+    // },
   ],
 }
