@@ -36,9 +36,9 @@
       "matchPackageNames": ["nginx"],
       "versioning": "loose",
     },
-    // {
-    //   "matchUpdateTypes": ["minor", "patch", "digest"],
-    //   "automerge": true,
-    // },
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true,
+    },
   ],
 }
