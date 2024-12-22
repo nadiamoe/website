@@ -1,0 +1,44 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":dependencyDashboard",
+    ":semanticCommitsDisabled",
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "depNameTemplate": "lowlighter/matcha",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver",
+      "fileMatch": [
+        "Dockerfile",
+      ],
+      "matchStrings": [
+        "https://matcha.mizu.sh/v/(?<currentValue>[\\w.-]+)",
+      ],
+    },
+    {
+      "customType": "regex",
+      "depNameTemplate": "simple-icons/simple-icons-font",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver",
+      "fileMatch": [
+        "Dockerfile",
+      ],
+      "matchStrings": [
+        "simple-icons-font@(?<currentValue>[\\w.-]+)",
+      ],
+    },
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["nginx"],
+      "versioning": "loose",
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true,
+    },
+  ],
+}
