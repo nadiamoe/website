@@ -33,10 +33,6 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["nginx"],
-      "versioning": "loose",
-    },
-    {
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true,
     },
