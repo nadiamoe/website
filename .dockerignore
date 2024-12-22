@@ -1,4 +1,6 @@
 .dockerignore
-.renovate.json5
+.git/
+.github/
+renovate.json5
 dev.sh
 Dockerfile
