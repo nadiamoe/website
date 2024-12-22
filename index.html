@@ -22,6 +22,12 @@
     .links a {
       color: var(--default);
     }
+
+    .links article {
+      flex: auto;
+      flex-grow: 2;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -32,8 +38,8 @@
       Systems programmer and container enthusiast
     </blockquote>
   </main>
-  <section class="centered links" style="display: flex;">
-    <article>
+  <section class="centered links flex row wrap">
+    <article class="flex grow">
       <p>
         <a href="https://github.com/nadiamoe" target="_blank">
           <i class="si si-github"></i>
