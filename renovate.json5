@@ -30,6 +30,18 @@
         "simple-icons-font@v(?<currentValue>[\\w.-]+)",
       ],
     },
+    {
+      "customType": "regex",
+      "depNameTemplate": "Templarian/MaterialDesign-Webfont",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver",
+      "fileMatch": [
+        "Dockerfile",
+      ],
+      "matchStrings": [
+        "Templarian/MaterialDesign-Webfont/raw/refs/tags/(?<currentValue>[\\w.-]+)",
+      ],
+    },
   ],
   "packageRules": [
     {
