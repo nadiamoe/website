@@ -39,7 +39,7 @@
         "Dockerfile",
       ],
       "matchStrings": [
-        "Templarian/MaterialDesign-Webfont/raw/refs/tags/(?<currentValue>[\\w.-]+)",
+        "Templarian/MaterialDesign-Webfont/refs/tags/(?<currentValue>[\\w.-]+)",
       ],
     },
   ],
