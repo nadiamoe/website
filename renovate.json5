@@ -20,18 +20,6 @@
     },
     {
       "customType": "regex",
-      "depNameTemplate": "simple-icons/simple-icons-font",
-      "datasourceTemplate": "github-tags",
-      "versioningTemplate": "semver",
-      "fileMatch": [
-        "Dockerfile",
-      ],
-      "matchStrings": [
-        "simple-icons-font@v(?<currentValue>[\\w.-]+)",
-      ],
-    },
-    {
-      "customType": "regex",
       "depNameTemplate": "Templarian/MaterialDesign-Webfont",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver",
