@@ -20,11 +20,7 @@ ADD --chmod=0444 \
 
 COPY nginx.conf /etc/nginx/
 COPY images/ images/
-
 # Build 88x31 index, which is used by a script to fill section.buttons.
-RUN for d in buttons friends; do\
-  find images/88x31/$d -maxdepth 1 -type f | grep -ve '^\.' | sort > 88x31-$d.txt; \
-  done
+RUN find images/88x31/buttons -maxdepth 1 -type f | sort > 88x31-buttons.txt
 
 COPY index.html ./
-
