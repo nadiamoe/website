@@ -33,10 +33,33 @@
       text-align: center;
     }
 
+    section.buttons img {
+      margin: 0.2em;
+      border-radius: 0;
+    }
+
     article {
       flex: auto;
     }
   </style>
+  <script type="text/javascript">
+    window.onload = () => {
+      const container = document.getElementById("buttons");
+      window
+        .fetch("88x31.txt")
+        .then(response => response.text())
+        .then((str) => {
+          str.split("\n").forEach(e => {
+            e = e.trim();
+            if (e === "") {return;}
+            const img = document.createElement("img");
+            img.setAttribute("src", e);
+            img.setAttribute("alt", "Classic 88x31 button named " + e);
+            container.append(img);
+          });
+        })
+    }
+  </script>
 </head>
 
 <body class="monospace">
@@ -113,6 +136,14 @@
       </article>
     </section>
   </main>
+  <section id="buttons" class="flex wrap center buttons">
+    <header class="width">
+      <h3>Buttons</h3>
+    </header>
+    <!-- Populated programmatically -->
+  </section>
+  <section class="flex row wrap center buttons">
+  </section>
   <footer class="centered smaller">
     <a href="https://github.com/nadiamoe/website" target="_blank">
       <span class="mdi mdi-github"></span> Source code
