@@ -43,10 +43,9 @@
     }
   </style>
   <script type="text/javascript">
-    window.onload = () => {
-      const container = document.getElementById("buttons");
+    function fillWithButtons(container, indexURL) {
       window
-        .fetch("88x31.txt")
+        .fetch(indexURL)
         .then(response => response.text())
         .then((str) => {
           str.split("\n").forEach(e => {
@@ -58,6 +57,9 @@
             container.append(img);
           });
         })
+    }
+    window.onload = () => {
+      fillWithButtons(document.getElementById("buttons"), "88x31-buttons.txt")
     }
   </script>
 </head>
