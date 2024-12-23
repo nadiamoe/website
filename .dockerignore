@@ -1,6 +1,0 @@
-.dockerignore
-.git/
-.github/
-renovate.json5
-dev.sh
-Dockerfile

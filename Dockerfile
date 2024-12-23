@@ -11,4 +11,4 @@ ADD --chmod=0555 \
   https://cdn.jsdelivr.net/npm/simple-icons-font@v14.0.0/font/SimpleIcons.otf \
   ./fonts/
 
-COPY . ./
+COPY index.html ./
