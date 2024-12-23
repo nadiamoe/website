@@ -24,4 +24,5 @@ ADD --chmod=0555 \
   https://gravatar.com/avatar/38174e9a695ed75df73d0862dfc2239796d4942d347b963ceea66e53d0c40447?s=256 \
   ./images/gravatar.png
 
+COPY nginx.conf /etc/nginx/
 COPY index.html ./
