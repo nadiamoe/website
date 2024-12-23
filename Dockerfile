@@ -10,5 +10,8 @@ ADD --chmod=0555 \
   https://cdn.jsdelivr.net/npm/simple-icons-font@v14.0.0/font/SimpleIcons.woff2 \
   https://cdn.jsdelivr.net/npm/simple-icons-font@v14.0.0/font/SimpleIcons.otf \
   ./fonts/
+ADD --chmod=0555 \
+  https://gravatar.com/avatar/38174e9a695ed75df73d0862dfc2239796d4942d347b963ceea66e53d0c40447?s=256 \
+  ./images/gravatar.png
 
 COPY index.html ./
