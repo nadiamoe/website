@@ -19,4 +19,8 @@ ADD --chmod=0444 \
   ./images/gravatar.png
 
 COPY nginx.conf /etc/nginx/
+COPY images/ images/
 COPY index.html ./
+
+# Build 88x31 index, which is used by a script to fill section.buttons.
+RUN find images/88x31 -maxdepth 1 -type f | sort > 88x31.txt
