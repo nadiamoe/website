@@ -42,26 +42,6 @@
       flex: auto;
     }
   </style>
-  <script type="text/javascript">
-    function fillWithButtons(container, indexURL) {
-      window
-        .fetch(indexURL)
-        .then(response => response.text())
-        .then((str) => {
-          str.split("\n").forEach(e => {
-            e = e.trim();
-            if (e === "") {return;}
-            const img = document.createElement("img");
-            img.setAttribute("src", e);
-            img.setAttribute("alt", "Classic 88x31 button named " + e);
-            container.append(img);
-          });
-        })
-    }
-    window.onload = () => {
-      fillWithButtons(document.getElementById("buttons"), "88x31-buttons.txt")
-    }
-  </script>
 </head>
 
 <body class="monospace">
@@ -135,7 +115,42 @@
     <header class="width">
       <h3>Buttons</h3>
     </header>
-    <!-- Populated programmatically -->
+    <a href="https://fedi.tips/">
+      <img src="images/88x31/buttons/fediverse.png" alt="Join the fediverse">
+    </a>
+    <a href="https://gbadev.net/tonc/">
+      <img src="images/88x31/buttons/gameboy_advance_net.gif" alt="GameBoy Advance">
+    </a>
+    <a href="https://www.mozilla.org/firefox/new/">
+      <img src="images/88x31/buttons/getfirefox.gif" alt="Get Firefox">
+    </a>
+    <a href="https://test-ipv6.com/">
+      <img src="images/88x31/buttons/ipv6.gif" alt="IPv6 ✅">
+    </a>
+    <a href="https://jellyfin.org/">
+      <img src="images/88x31/buttons/jellyfin.gif" alt="Jellyfin">
+    </a>
+    <a>
+      <img src="images/88x31/buttons/kawaii-dreams.gif" alt="kawaii-dreams.gif">
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+      <img src="images/88x31/buttons/learn-html.gif" alt="Learn HTML Today">
+    </a>
+    <a>
+      <img src="images/88x31/buttons/mikuapproved.gif" alt="Miku approved website">
+    </a>
+    <a>
+      <img src="images/88x31/buttons/nocookie.gif" alt="100% cookie free">
+    </a>
+    <a href="https://genderdysphoria.fyi/">
+      <img src="images/88x31/buttons/transgender.png" alt="🏳‍⚧">
+    </a>
+    <a href="https://github.com/gorhill/uBlock">
+      <img src="images/88x31/buttons/ublock.png" alt="Get uBlock Origin">
+    </a>
+    <a href="https://xenia.chimmie.k.vu/">
+      <img src="images/88x31/buttons/xenia.gif" alt="Xenia, the linux mascot">
+    </a>
   </section>
   <section class="flex wrap center buttons">
     <header class="width">
