@@ -7,7 +7,11 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-find "$1" -maxdepth 1 -type f | sort | while read -r path; do
+find "$1" -type f | sort | while read -r path; do
+  if grep -e "$path" index.html >/dev/null; then
+    continue
+  fi
+
   cat <<EOF
 <a href="#">
   <img src="${path}" alt="$(basename "$path")">
