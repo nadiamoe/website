@@ -17,6 +17,9 @@ ADD --chmod=0444 \
 ADD --chmod=0444 \
   https://gravatar.com/avatar/38174e9a695ed75df73d0862dfc2239796d4942d347b963ceea66e53d0c40447?s=256 \
   ./images/gravatar.png
+ADD --chmod=0444 \
+  https://raw.githubusercontent.com/nadiamoe/owo.cafe/refs/heads/main/assets/owocafe-88x31.gif \
+  ./images/88x31/buttons/
 
 COPY nginx.conf /etc/nginx/
 COPY images/ images/
