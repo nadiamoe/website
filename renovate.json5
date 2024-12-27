@@ -51,7 +51,12 @@
     {
       // Trim leading v.
       "matchPackageNames": ["botoxparty/xp.css"],
-      "extractVersion": "v(?<version>.*)$"
+      "extractVersion": "v(?<version>.*)$",
     },
+    {
+      "matchPackageNames": ["botoxparty/xp.css"],
+      "matchNewValue": "/v?0.3.0/", // Older than latest 0.2.x, for some reason.
+      "enabled": false,
+    }
   ],
 }
