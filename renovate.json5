@@ -48,5 +48,10 @@
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true,
     },
+    {
+      // Trim leading v.
+      "matchPackageNames": ["botoxparty/xp.css"],
+      "extractVersion": "v(?<version>.*)$"
+    },
   ],
 }
