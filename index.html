@@ -44,6 +44,18 @@
     article {
       flex: auto;
     }
+
+    iframe.ad {
+      overflow: hidden;
+      height: 9rem;
+    }
+
+    @media (max-width:544px) {
+      iframe.ad {
+        background-color: red;
+        height: 11rem;
+      }
+    }
   </style>
 </head>
 
@@ -59,16 +71,7 @@
     </p>
   </section>
   <section class="center blocker-overlay">
-    <div class="flash severe">
-      <div style="float: left; margin-right: 1rem; font-size: 2em;">
-        <span class="attention mdi mdi-shield-off"></span>
-      </div>
-      <p>
-        You do not seem to be using an up-to-date ad blocker.
-        This exposes you to indiscriminate tracking and <b>known malware vectors</b>.
-        Download <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> now.
-      </p>
-    </div>
+    <iframe class="ad" scrolling="no" src="ad.html"></iframe>
   </section>
   <main>
     <section class="flex wrap">

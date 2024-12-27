@@ -26,4 +26,4 @@ ADD --chmod=0444 \
 
 COPY nginx.conf /etc/nginx/
 COPY images/ images/
-COPY index.html robots.txt ./
+COPY index.html ad.html robots.txt ./
