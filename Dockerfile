@@ -6,9 +6,9 @@ WORKDIR /usr/share/nginx/html/
 ADD --chmod=0444 \
   https://matcha.mizu.sh/v/3.0.0/matcha.css \
   https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/refs/tags/v7.4.47/css/materialdesignicons.min.css \
-  https://unpkg.com/xp.css@0.3.0/dist/XP.css \
-  https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif.woff \
-  https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif.woff2 \
+  https://unpkg.com/xp.css@0.2.3/dist/XP.css \
+  https://unpkg.com/xp.css@0.2.3/dist/ms_sans_serif.woff \
+  https://unpkg.com/xp.css@0.2.3/dist/ms_sans_serif.woff2 \
   ./css/
 ADD --chmod=0444 \
   https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/refs/tags/v7.4.47/fonts/materialdesignicons-webfont.eot \
