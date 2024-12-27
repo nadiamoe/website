@@ -30,6 +30,18 @@
         "Templarian/MaterialDesign-Webfont/refs/tags/(?<currentValue>[\\w.-]+)",
       ],
     },
+    {
+      "customType": "regex",
+      "depNameTemplate": "botoxparty/xp.css",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver",
+      "fileMatch": [
+        "Dockerfile",
+      ],
+      "matchStrings": [
+        "https://unpkg.com/xp.css@(?<currentValue>[\\w.-]+)",
+      ],
+    },
   ],
   "packageRules": [
     {
