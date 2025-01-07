@@ -1,4 +1,4 @@
-FROM nginx:1.27.3-alpine@sha256:a0193b3a56c7f04261c8044c1f14e2f529ed03f0423ff30feee3b87b3dfaf955
+FROM nginx:1.27.3-alpine@sha256:4efa432b751239898e576a2178702fb156fc483f6d456e0ad5899b3bf5c0445a
 
 WORKDIR /usr/share/nginx/html/
 
