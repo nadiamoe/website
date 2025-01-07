@@ -35,7 +35,8 @@
       text-align: center;
     }
 
-    section.buttons img {
+    section.buttons img,
+    img.button {
       margin: 0.2em;
       border-radius: 0;
       image-rendering: pixelated;
@@ -191,6 +192,27 @@
     <a href="https://stage7.net">
       <img alt="Stage7" src="images/88x31/friends/stage7.png">
     </a>
+  </section>
+  <section>
+    <header class="width">
+      <h3>
+        My button
+        <img class="button" style="margin: 0; vertical-align: middle;" alt="nadia.moe 88x31 button"
+          src="images/88x31/buttons/nadia.moe.gif">
+      </h3>
+    </header>
+    <p class="small">
+      You can hotlink my button! If you do, please keep the <var> referrerpolicy </var> attribute.
+      If you don't, please try to update the image regularly.
+    </p>
+    <output class="small" style="display: block; white-space: nowrap; overflow-x: scroll;">
+      &lt;a href="https://nadia.moe"&gt;
+      &lt;img
+      src="https://nadia.moe/images/88x31/buttons/nadia.moe.gif"
+      attributionsrc="https://nadia.moe"
+      referrerpolicy="origin"&gt;
+      &lt;/a&gt;
+    </output>
   </section>
   <footer class="centered smaller">
     <a href="https://github.com/nadiamoe/website">
