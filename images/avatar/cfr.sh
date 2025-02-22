@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eo pipefail
+
 if [[ -z $1 ]]; then
   echo "Usage: $0 <file.gif> [file-cfr.gif]"
   exit 1
@@ -11,3 +13,5 @@ if [[ -z $out ]]; then
 fi
 
 ffmpeg -i "$1" -vf "fps=30,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" "$out"
+magick "$out" -layers optimize "$out.optimized"
+mv "$out.optimized" "$out"
