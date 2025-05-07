@@ -1,60 +1,67 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>nadiamoe/renovate-config",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'github>nadiamoe/renovate-config',
   ],
-  "customManagers": [
+  customManagers: [
     {
-      "customType": "regex",
-      "depNameTemplate": "lowlighter/matcha",
-      "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver",
-      "fileMatch": [
-        "Dockerfile",
+      customType: 'regex',
+      depNameTemplate: 'lowlighter/matcha',
+      datasourceTemplate: 'github-releases',
+      versioningTemplate: 'semver',
+      managerFilePatterns: [
+        '/Dockerfile/',
       ],
-      "matchStrings": [
-        "https://matcha.mizu.sh/v/(?<currentValue>[\\w.-]+)",
+      matchStrings: [
+        'https://matcha.mizu.sh/v/(?<currentValue>[\\w.-]+)',
       ],
     },
     {
-      "customType": "regex",
-      "depNameTemplate": "Templarian/MaterialDesign-Webfont",
-      "datasourceTemplate": "github-tags",
-      "versioningTemplate": "semver",
-      "fileMatch": [
-        "Dockerfile",
+      customType: 'regex',
+      depNameTemplate: 'Templarian/MaterialDesign-Webfont',
+      datasourceTemplate: 'github-tags',
+      versioningTemplate: 'semver',
+      managerFilePatterns: [
+        '/Dockerfile/',
       ],
-      "matchStrings": [
-        "Templarian/MaterialDesign-Webfont/refs/tags/(?<currentValue>[\\w.-]+)",
+      matchStrings: [
+        'Templarian/MaterialDesign-Webfont/refs/tags/(?<currentValue>[\\w.-]+)',
       ],
     },
     {
-      "customType": "regex",
-      "depNameTemplate": "botoxparty/xp.css",
-      "datasourceTemplate": "github-tags",
-      "versioningTemplate": "semver",
-      "fileMatch": [
-        "Dockerfile",
+      customType: 'regex',
+      depNameTemplate: 'botoxparty/xp.css',
+      datasourceTemplate: 'github-tags',
+      versioningTemplate: 'semver',
+      managerFilePatterns: [
+        '/Dockerfile/',
       ],
-      "matchStrings": [
-        "https://unpkg.com/xp.css@(?<currentValue>[\\w.-]+)",
+      matchStrings: [
+        'https://unpkg.com/xp.css@(?<currentValue>[\\w.-]+)',
       ],
     },
   ],
-  "packageRules": [
+  packageRules: [
     {
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "automerge": true,
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'digest',
+      ],
+      automerge: true,
     },
     {
-      // Trim leading v.
-      "matchPackageNames": ["botoxparty/xp.css"],
-      "extractVersion": "v(?<version>.*)$",
+      matchPackageNames: [
+        'botoxparty/xp.css',
+      ],
+      extractVersion: 'v(?<version>.*)$',
     },
     {
-      "matchPackageNames": ["botoxparty/xp.css"],
-      "matchNewValue": "/v?0.3.0/", // Older than latest 0.2.x, for some reason.
-      "enabled": false,
-    }
+      matchPackageNames: [
+        'botoxparty/xp.css',
+      ],
+      matchNewValue: '/v?0.3.0/',
+      enabled: false,
+    },
   ],
 }
