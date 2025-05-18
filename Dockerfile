@@ -25,5 +25,12 @@ COPY nginx.conf /etc/nginx/
 COPY images/ images/
 COPY index.html ad.html robots.txt ./
 
+ARG GIT_REF=main
+RUN <<EOF
+  git_ref_short=$(printf "%.8s" ${GIT_REF})
+  sed -i "s/__GIT_REF__/${GIT_REF}/g" index.html
+  sed -i "s/__GIT_REF_SHORT__/${git_ref_short}/g" index.html
+EOF
+
 # Fix folder permissions, which apparently docker now creates without the exec bit.
 RUN find -type d -perm -004 -print0 | xargs -0 chmod +rx
