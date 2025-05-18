@@ -24,3 +24,6 @@ ADD --chmod=0444 \
 COPY nginx.conf /etc/nginx/
 COPY images/ images/
 COPY index.html ad.html robots.txt ./
+
+# Fix folder permissions, which apparently docker now creates without the exec bit.
+RUN find -type d -perm -004 -print0 | xargs -0 chmod +rx
