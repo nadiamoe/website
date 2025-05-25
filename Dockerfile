@@ -1,6 +1,6 @@
-FROM nginx:1.28.0-alpine@sha256:aed99734248e851764f1f2146835ecad42b5f994081fa6631cc5d79240891ec9
+FROM alpine:3.21.3@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c as build
 
-WORKDIR /usr/share/nginx/html/
+WORKDIR /build
 
 # Renovate updates the URLs below.
 ADD --chmod=0444 \
@@ -24,7 +24,6 @@ ADD --chmod=0444 \
   https://fediring.net/static/badges/1.gif \
   ./images/88x31/buttons/fediring.gif
 
-COPY nginx.conf /etc/nginx/
 COPY images/ images/
 COPY index.html ad.html robots.txt ./
 
@@ -37,3 +36,8 @@ EOF
 
 # Fix folder permissions, which apparently docker now creates without the exec bit.
 RUN find -type d -perm -004 -print0 | xargs -0 chmod +rx
+
+FROM nginx:1.28.0-alpine@sha256:aed99734248e851764f1f2146835ecad42b5f994081fa6631cc5d79240891ec9
+
+COPY nginx.conf /etc/nginx/
+COPY --from=build /build /usr/share/nginx/html/
