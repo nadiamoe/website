@@ -14,17 +14,14 @@
 </head>
 
 <body>
+  <form id="ublock-github" style="display: none;"></form>
   <div class="window">
     <div class="title-bar">
       <div class="title-bar-text">
         Your PC is at risk
       </div>
       <div class="title-bar-controls">
-        <button aria-label="Close">
-          <a target="_parent _blank" style="color: #0000; font-size: 2em;" href="https://github.com/gorhill/uBlock">
-            ❌
-          </a>
-        </button>
+        <button aria-label="Close" form="ublock-github" formaction="https://github.com/gorhill/uBlock" formtarget="_blank"></button>
       </div>
     </div>
     <div class="window-body">
@@ -36,11 +33,7 @@
         </p>
       </section>
       <section class="field-row" style="justify-content: flex-end;">
-        <button>
-          <a target="_parent _blank" href="https://github.com/gorhill/uBlock">
-            Download uBlock Origin
-          </a>
-        </button>
+        <button form="ublock-github" formaction="https://github.com/gorhill/uBlock" formtarget="_blank">Download uBlock Origin</button>
       </section>
     </div>
   </div>
