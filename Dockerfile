@@ -37,7 +37,7 @@ EOF
 # Fix folder permissions, which apparently docker now creates without the exec bit.
 RUN find -type d -perm -004 -print0 | xargs -0 chmod +rx
 
-FROM nginx:1.29.0-alpine@sha256:b2e814d28359e77bd0aa5fed1939620075e4ffa0eb20423cc557b375bd5c14ad
+FROM nginx:1.29.0-alpine@sha256:186168f580ee1792a48cd83c3e42b110a8ccb21e855a6271240975d451311d6b
 
 COPY nginx.conf /etc/nginx/
 COPY --from=build /build /usr/share/nginx/html/
