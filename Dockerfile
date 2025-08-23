@@ -20,9 +20,6 @@ ADD --chmod=0444 \
 ADD --chmod=0444 \
   https://raw.githubusercontent.com/nadiamoe/owo.cafe/refs/heads/main/assets/owocafe-88x31.gif \
   ./images/88x31/buttons/
-ADD --chmod=0444 \
-  https://fediring.net/static/badges/1.gif \
-  ./images/88x31/buttons/fediring.gif
 
 COPY images/ images/
 COPY index.html ad.html robots.txt ./
