@@ -21,6 +21,7 @@ ADD --chmod=0444 \
   https://raw.githubusercontent.com/nadiamoe/owo.cafe/refs/heads/main/assets/owocafe-88x31.gif \
   ./images/88x31/buttons/
 
+COPY dot-well-known/ .well-known/
 COPY images/ images/
 COPY index.html ad.html robots.txt ./
 

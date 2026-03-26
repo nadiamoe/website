@@ -1,0 +1,19 @@
+{
+  "$schema": "https://codeberg.org/LunarEclipse/well-known-button/raw/branch/main/drafts/button-2024-06.schema.json",
+  "default": "nadia.moe",
+  "buttons": [
+    {
+      "id": "nadia.moe",
+      "uri": "https://nadia.moe/images/88x31/buttons/nadia.moe.gif",
+      "alt": "Nadia's button (CC BY-ND nadia.moe)",
+      "link": "https://nadia.moe",
+      "animations": "minimal"
+    },
+    {
+      "id": "runs-on-k8s",
+      "uri": "https://nadia.moe/images/88x31/buttons/kubernetes.png",
+      "alt": "Runs on Kubernetes (CC BY-NC-SA nadia.moe)",
+      "animations": "none"
+    }
+  ]
+}
