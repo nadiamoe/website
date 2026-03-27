@@ -11,4 +11,5 @@ longer want to be, please send me an email.
 The "Nadia.moe" button is authored by me, and is licensed [CC BY-ND](https://creativecommons.org/licenses/by-nd/4.0/). 
 The "Runs on K8s" is also authored by me, and is licensed [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 The "Fediverse" button is made by https://actuallysomecat.github.io/about/.
+The "Fediring" button is made by [`~thecozycat`](https://todo.sr.ht/~jbauer/fediring/322#event-399857)
 Other buttons are public domain.
